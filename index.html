@@ -59,10 +59,6 @@
 				<div class="row card-panel">
 					<h4>Formulario de Registro - Usuario</h4>
 					<div class="input-field col s4">
-						<input type="number" id="id_usr" max="99999999999">
-						<label for="id_usr">ID del usuario</label>
-					</div>
-					<div class="input-field col s4">
 						<input type="text" id="nombre">
 						<label for="nombre">Nombre</label>
 					</div>
@@ -70,29 +66,20 @@
 						<input type="text" id="apellido">
 						<label for="apellido">Apellidos</label>
 					</div>
-					<div class="input-field col s6">
-						<input type="text" id="direccion" maxlength="45">
-						<label for="direccion">Dirección</label>
+					<div class="input-field col s4">
+						<input type="text" id="usuario">
+						<label for="usuario">Usuario</label>
 					</div>
-					<div class="input-field col s6">
-						<input type="text" id="telefono" maxlength="20">
-						<label for="telefono">Teléfono</label>
-					</div>
-					<div class="input-field col s12">
+					<div class="input-field col s8">
 						<input type="email" id="email" maxlength="120">
 						<label for="email">Email</label>
 					</div>
-					<div class="input-field col s6">
-						<input type="text" id="ccusuario">
-						<label for="ccusuario">CC del usuario</label>
+					<div class="input-field col s3">
+						<input type="date" id="fechanac" maxlength="10" class="validate" required>
+						<label for="fechanac">Fecha de Nacimiento</label>
 					</div>
-					<div class="input-field col s6">
-						<select id="id_pais">
-							<option value="1">Colombia</option>
-							<option value="2">Venezuela</option>
-							<option value="3">Argentina</option>
-						</select>
-						<label for="id_pais">País</label>			
+					<div class="input-field col s1" id="edadCal">
+						<label for="edadCal">Edad</label>
 					</div>
 					<div class="input-field col s6">
 						<input type="password" id="ccpaswd">
@@ -102,59 +89,7 @@
 						<input type="password" id="ccpaswdValidate">
 						<label for="password">Escriba su contraseña nuevamente</label>
 					</div>
-					<div class='input-field col s4 multi-range' data-lbound='20' data-ubound='150'>
-    					<hr />
-    						<label>Rango de precios (en millones)</label>
-    						<input type='range' min='20' max='150' step='1' value='20' oninput='this.parentNode.dataset.lbound=this.value;'/>
-    						<input type='range' min='20' max='150' step='1' value='150' oninput='this.parentNode.dataset.ubound=this.value;'/>
-					</div>
-					<div class="input-field col s3">
-						<form>
-							<label>
-								<input id="radio" type="radio" onclick="show()">
-								<span> Mostrar preferencias </span>
-							</label>
-						</form>
-					</div>
-					<div class="input-field col s2" id="act" hidden="true">
-						<select id="color">
-							<option value="0">Color</option>
-   							<option value="1">Amarillo</option>
-   							<option value="2">Azul</option>
-   							<option value="3">Rojo</option>
-   							<option value="4">Verde</option>
-   							<option value="5">Naranja</option>
-   							<option value="6">Morado</option>
-   						</select>
-						<select id="marca">
-							<option value="0">Marca</option>
-   							<option value="1">Audi</option>
-   							<option value="2">BMW</option>
-   							<option value="3">Chevrolet</option>
-   							<option value="4">Ford</option>
-   							<option value="5">Kia</option>
-   							<option value="6">Toyota</option>
-   						</select>
-						<select id="estilo">
-							<option value="0">Estilo</option>
-   							<option value="1">Monovolumen</option>
-   							<option value="2">Sedán</option>
-   							<option value="3">Descapotable</option>
-   							<option value="4">Familiar</option>
-   							<option value="5">Todoterreno</option>
-   							<option value="6">Deportivo</option>
-   						</select>
-						<select id="modelo">
-							<option value="0">Modelo</option>
-   							<option value="1">Allroad</option>
-   							<option value="2">Z3</option>
-   							<option value="3">Camaro</option>
-   							<option value="4">Fusion</option>
-   							<option value="5">New Rio</option>
-   							<option value="6">Supra</option>
-   						</select>
-					</div>
-					<button class="btn-large right" type="submit" onclick="return enviarFormulario()">Enviar</button>
+				<button class="btn-large right" type="submit" onclick="return enviarFormulario()">Enviar</button>
 				</div>
 			</form>
 		</div>
