@@ -62,7 +62,37 @@
 						<input type="password" id="ccpaswdValidate">
 						<label for="password">Escriba su contraseña nuevamente</label>
 					</div>
-				<button class="btn-large right" type="submit" onclick="return enviarFormulario()">Enviar</button>
+					<div class="input-field col s3 switch" id="check1">
+    					<label>¿Ha sufrido enfermedades?<br>
+      					No
+      						<input type="checkbox">
+      						<span class="lever"></span>
+      					Sí
+    					</label>
+  					</div>
+					<div class="input-field col s3 switch" style="display: none" id="check2">
+    					<label>¿Han sido contagiosas?<br>
+      					No
+      						<input type="checkbox">
+      						<span class="lever"></span>
+      					Sí
+    					</label>
+  					</div>
+  					<div class="input-field col s6" style="display: none" id="ing">
+  						<input type="text" id="enfer">
+						<label for="enfer">Ingrese las enfermedades</label>
+  					</div>
+  					<script>
+						$( "#check1" ).click(function() {
+  							$( "#check2" ).show();
+						});
+						$( "#check2" ).click(function() {
+  							$( "#ing" ).show();
+						});
+					</script>
+					<div class="input-field col s6">
+						<button class="btn-large" type="submit" onclick="return enviarFormulario()">Enviar</button>
+					</div>
 				</div>
 			</form>
 		</div>
@@ -72,3 +102,4 @@
 	<script src="validacionIndex.js"></script>
 </body>	
 </html>
+
